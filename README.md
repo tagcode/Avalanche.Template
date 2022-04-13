@@ -27,7 +27,7 @@ global using Avalanche.Utilities;
 <li>Avalanche.Utilities.dll</li>
 <li>Avalanche.Utilities.Abstractions.dll</li>
 </ul>
-<pre><c</details>
+</details>
 
 
 
