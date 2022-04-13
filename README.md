@@ -1,10 +1,11 @@
-﻿---
-uid: avalanche.template
----
-# Introduction
+﻿# Introduction
 Avalanche.Template contains classes for text templating.
 
-[!code-csharp[Snippet](index.cs#01)]
+
+```csharp
+ITemplateText templateText = new TemplateText("Error code {0} (0x{0:X4}).", TemplateFormat.Brace).SetReadOnly();
+WriteLine(templateText.Print(null, new object?[] { 0x100 })); // "Error code 256 (0x0100)."
+```
 
 The following <em>global_includes.cs</em> can be used to include all extension methods.
 
@@ -29,9 +30,4 @@ global using Avalanche.Utilities;
 <pre><c</details>
 
 
-# Full Example
-<details>
-  <summary>Full example</summary>
-[!code-csharp[Full](index.cs)]
-</details>
 
