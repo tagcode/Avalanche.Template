@@ -1,0 +1,10 @@
+﻿example.Run();
+templateemplacement.Run();
+templateextractpattern.Run();
+itemplateformats.Run();
+templateformats.Run();
+templateformat.Run();
+templateformatprintable.Run();
+templateprintable.Run();
+templatetext.Run();
+templatebreakdown.Run();

@@ -1,5 +1,5 @@
 ﻿<b>Avalanche.Template</b> contains classes for text templating,
-[[git]](https://github.com/tagcode/Avalanche.Template), 
+[[git]](https://github.com/tagcode/Avalanche.Template/Avalanche.Template), 
 [[www]](https://avalanche.fi/Avalanche.Core/Avalanche.Template/docs/), 
 [[licensing]](https://avalanche.fi/Avalanche.Core/license/index.html).
 
@@ -12,6 +12,7 @@ Add package reference to .csproj.
     <PackageReference Include="Avalanche.Template"/>
 </ItemGroup>
 ```
+
 <b>TemplateText(text, format)</b> represents a template text.
 
 ```csharp
