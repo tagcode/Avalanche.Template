@@ -7,7 +7,7 @@
     <Company>Avalanche Information Technology Oy</Company>
     <Copyright>Toni Kalajainen</Copyright>
     <PackageProjectUrl>https://avalanche.fi/Avalanche.Core/</PackageProjectUrl>
-    <Version>0.1.1</Version>
+    <Version>0.1.2</Version>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>Avalanche.Template</RootNamespace>
     <Title>Avalanche.Template.Abstractions</Title>
@@ -34,7 +34,7 @@
     <RestoreAdditionalProjectSources>https://avalanche.fi/Avalanche.Core/nupkg/index.json</RestoreAdditionalProjectSources>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Avalanche.Utilities.Abstractions" Version="0.1.1" />
+    <PackageReference Include="Avalanche.Utilities.Abstractions" Version="0.1.2" />
   </ItemGroup>
   <ItemGroup>
     <None Update="README.md">
