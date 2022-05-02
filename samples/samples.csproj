@@ -13,5 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Avalanche.Template.Abstractions\Avalanche.Template.Abstractions.csproj" />
     <ProjectReference Include="..\Avalanche.Template\Avalanche.Template.csproj" />
+    <PackageReference Include="Avalanche.Localization.Cldr" Version="41.0.1.3" />
+    <PackageReference Include="Avalanche.Localization" Version="0.1.3" />
   </ItemGroup>
 </Project>

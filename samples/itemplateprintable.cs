@@ -1,6 +1,7 @@
 ﻿using System.Buffers;
 using System.Globalization;
 using System.Text;
+using Avalanche.Localization;
 using Avalanche.Template;
 using static System.Console;
 
@@ -33,19 +34,19 @@ public class templateprintable
             WriteLine(print);
         }
         {
-            ITemplatePrintable printable = new TemplateText("You have {0} apple(s).", TemplateFormat.Brace).WithFormat(CultureInfo.GetCultureInfo("en"));
+            // Create localization
+            ILocalization localization = new Localization()
+                .AddLine("", "Apple", "Detect", "You've got no apples.", "Unicode.CLDR", "count:cardinal:zero:en")
+                .AddLine("", "Apple", "Detect", "You've got an apple.", "Unicode.CLDR", "count:cardinal:one:en")
+                .AddLine("", "Apple", "Detect", "You've got {count} apples.", "Unicode.CLDR", "count:cardinal:other:en");
+            // Get printable
+            ITemplatePrintable printable = localization.LocalizableText["Apple"];
             // "You have no apples."
-            printable.Print(new object?[] { 0 });
+            WriteLine(printable.Print(new object?[] { 0 }));
             // "You have an apple."
-            printable.Print(new object?[] { 1 });
+            WriteLine(printable.Print(new object?[] { 1 }));
             // "You have 3 apples."
-            printable.Print(new object?[] { 3 });
-            // "Sinulla ei ole omenoita."
-            printable.Print(new object?[] { 0 });
-            // "Sinulla on yksi omena."
-            printable.Print(new object?[] { 1 });
-            // "Sinulla on 3 omenaa."
-            printable.Print(new object?[] { 3 });
+            WriteLine(printable.Print(new object?[] { 3 }));
         }
 
         {
